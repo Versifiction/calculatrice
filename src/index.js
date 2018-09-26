@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 
 import './app.css';
 
-import Calculatrice from '~/components/Calculatrice';
+import Calculatrice from './components/Calculatrice';
 
 
 // Ajout de l'élément virtuel dans le DOM du navigateur (mount/render).
