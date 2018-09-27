@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js add jquery
+  /usr/bin/node /usr/share/yarn/bin/yarn.js start
 
 PATH: 
   /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
@@ -14,7 +14,13 @@ Platform:
   linux x64
 
 Trace: 
-  Error: EEXIST: file already exists, symlink '../../../jsesc/bin/jsesc' -> '/var/www/html/spe/perso/calculatrice/node_modules/babel-generator/node_modules/.bin/jsesc'
+  SyntaxError: /var/www/html/spe/perso/calculatrice/package.json: Unexpected token } in JSON at position 1231
+      at JSON.parse (<anonymous>)
+      at /usr/share/yarn/lib/cli.js:1130:59
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:92:30)
+      at /usr/share/yarn/lib/cli.js:103:13
+      at <anonymous>
 
 npm manifest: 
   {
@@ -23,6 +29,7 @@ npm manifest:
     "description": "Point de départ des projets React",
     "main": "index.js",
     "repository": "git@github.com:O-clock-Hyperspace/React-modele.git",
+    "homepage": "https://versifiction.github.io/calculatrice",
     "author": "Jean-Denis Vauguet <jd@vauguet.fr>",
     "license": "MIT",
     "private": false,
@@ -42,6 +49,7 @@ npm manifest:
     "dependencies": {
       "babel-polyfill": "^6.26.0",
       "classnames": "^2.2.5",
+      "jquery": "^3.3.1",
       "prop-types": "^15.6.1",
       "react": "^16.4.0",
       "react-dom": "^16.4.0",
@@ -54,7 +62,8 @@ npm manifest:
     "scripts": {
       "start": "parcel src/index.html",
       "clean": "rm -rf .cache dist",
-      "watch": "yarn clean && yarn start"
+      "watch": "yarn clean && yarn start",
+  
     }
   }
 
@@ -2802,6 +2811,10 @@ Lockfile:
     dependencies:
       node-fetch "^1.0.1"
       whatwg-fetch ">=0.10.0"
+  
+  jquery@^3.3.1:
+    version "3.3.1"
+    resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
   
   js-base64@^2.1.9:
     version "2.4.8"
