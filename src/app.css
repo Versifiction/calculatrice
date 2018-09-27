@@ -59,6 +59,10 @@ button {
     line-height: 100px;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 .cinquante {
     width: 50%;
 }
